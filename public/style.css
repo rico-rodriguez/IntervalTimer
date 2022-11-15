@@ -1,0 +1,92 @@
+:root {
+  --interval: 20s;
+}
+
+body {
+  background-color: rgb(43, 63, 92);
+  color: #fff;
+  text-align: center;
+}
+.container {
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.innercontainer {
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.spin {
+  width: 20vh;
+  height: 20vh;
+  border: 2vh solid white;
+  border-radius: 50%;
+  border-top-color: rgb(255, 219, 82);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.spinAnim {
+  animation: spin var(--interval) ease-in-out infinite;
+  -webkit-animation: spin var(--interval) ease-in-out infinite;
+}
+.timer {
+  font: 10vh 'Roboto', sans-serif;
+  margin-bottom: 0.5vh;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+}
+.red {
+  display: flex;
+
+  flex-direction: column;
+}
+.green {
+  padding-top: 5vw;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.blue {
+}
+.container div {
+  font-size: 1vw;
+  padding: 2em;
+  color: white;
+  flex: 1;
+  max-width: 70vh;
+}
